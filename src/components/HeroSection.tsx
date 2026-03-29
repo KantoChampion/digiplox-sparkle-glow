@@ -119,7 +119,8 @@ const HeroSection = () => {
                   <img
                     src={characterImages[nextIndex]}
                     alt="Rainbow Robin character"
-                    className={`absolute inset-0 w-full h-full object-contain drop-shadow-[0_0_40px_hsl(120_100%_45%_/_0.3)] transition-opacity duration-700 ease-in-out ${transitioning ? "opacity-100" : "opacity-0"}`}
+                    className="absolute inset-0 w-full h-full object-contain drop-shadow-[0_0_40px_hsl(120_100%_45%_/_0.3)] transition-opacity duration-700 ease-in-out opacity-0"
+                    style={{ opacity: 1 }}
                     onTransitionEnd={handleTransitionEnd}
                   />
                 )}
