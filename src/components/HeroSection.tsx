@@ -74,9 +74,9 @@ const HeroSection = () => {
             </div>
 
             <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-black leading-none mb-4 animate-hero-fade-in opacity-0" style={{ animationDelay: "0.4s" }}>
-              <span className="text-gradient-rgb neon-text-rainbow">RAINBOW</span>
+              <span className="text-gradient-rgb neon-text-rainbow animate-glitch-flicker inline-block">RAINBOW</span>
               <br />
-              <span className="text-foreground">ROBIN</span>
+              <span className="text-foreground animate-neon-breathe inline-block" style={{ color: "hsl(var(--primary))" }}>ROBIN</span>
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground mb-4 leading-relaxed max-w-lg mx-auto lg:mx-0 animate-hero-fade-in opacity-0" style={{ animationDelay: "0.6s" }}>
