@@ -3,11 +3,10 @@ import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Games", href: "#games" },
+  { label: "Story", href: "#story" },
+  { label: "Stages", href: "#stages" },
+  { label: "Characters", href: "#characters" },
   { label: "Media", href: "#media" },
-  { label: "Downloads", href: "#downloads" },
-  { label: "Press", href: "#press" },
 ];
 
 const Navbar = () => {
@@ -16,8 +15,9 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border">
       <div className="container flex items-center justify-between h-16">
-        <a href="#home" className="font-heading text-xl font-bold tracking-widest text-primary neon-text">
-          DIGIPLOX
+        <a href="#home" className="font-heading text-lg font-bold tracking-widest">
+          <span className="text-gradient-rgb">RAINBOW</span>
+          <span className="text-foreground ml-1">ROBIN</span>
         </a>
         
         {/* Desktop */}
