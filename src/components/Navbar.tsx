@@ -7,6 +7,7 @@ const navLinks = [
   { label: "Stages", href: "#stages" },
   { label: "Characters", href: "#characters" },
   { label: "Media", href: "#media" },
+  { label: "Roadmap", href: "#roadmap" },
 ];
 
 const Navbar = () => {
