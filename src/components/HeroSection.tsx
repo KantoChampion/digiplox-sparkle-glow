@@ -4,18 +4,23 @@ import characterArt from "@/assets/robin-character.png";
 const HeroSection = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background */}
+      {/* Animated Background */}
       <div className="absolute inset-0">
         <img
           src={heroBg}
           alt="RGB Cyber Realm"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover animate-hero-drift scale-110"
           width={1920}
           height={1080}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/30 to-background" />
         <div className="absolute inset-0 bg-gradient-to-r from-background/50 via-transparent to-background/50" />
       </div>
+
+      {/* Animated RGB vignette */}
+      <div className="absolute inset-0 pointer-events-none animate-rgb-pulse"
+        style={{ background: "radial-gradient(ellipse at 30% 50%, hsl(var(--rgb-red) / 0.06) 0%, transparent 60%), radial-gradient(ellipse at 70% 40%, hsl(var(--rgb-blue) / 0.06) 0%, transparent 60%)" }}
+      />
 
       {/* Scanline overlay */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.03]"
@@ -25,29 +30,29 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 container px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          {/* Text */}
+          {/* Text — staggered fade-in */}
           <div className="text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 mb-6 animate-hero-fade-in opacity-0" style={{ animationDelay: "0.2s" }}>
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse-neon" />
               <span className="text-xs tracking-[0.2em] uppercase text-primary font-medium">Work In Progress · Unreal Engine 5</span>
             </div>
 
-            <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-black leading-none mb-4">
+            <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-black leading-none mb-4 animate-hero-fade-in opacity-0" style={{ animationDelay: "0.4s" }}>
               <span className="text-gradient-rgb neon-text-rainbow">RAINBOW</span>
               <br />
               <span className="text-foreground">ROBIN</span>
             </h1>
 
-            <p className="text-lg md:text-xl text-muted-foreground mb-4 leading-relaxed max-w-lg mx-auto lg:mx-0">
+            <p className="text-lg md:text-xl text-muted-foreground mb-4 leading-relaxed max-w-lg mx-auto lg:mx-0 animate-hero-fade-in opacity-0" style={{ animationDelay: "0.6s" }}>
               Escape from the Cyber Realm
             </p>
 
-            <p className="text-base text-muted-foreground/80 mb-8 leading-relaxed max-w-md mx-auto lg:mx-0">
+            <p className="text-base text-muted-foreground/80 mb-8 leading-relaxed max-w-md mx-auto lg:mx-0 animate-hero-fade-in opacity-0" style={{ animationDelay: "0.7s" }}>
               A next-gen sidescroller shooter blending fast-paced action, RGB color-switching mechanics, 
               and daring adult themes — inspired by Megaman &amp; Metroid.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center lg:items-start gap-4">
+            <div className="flex flex-col sm:flex-row items-center lg:items-start gap-4 animate-hero-fade-in opacity-0" style={{ animationDelay: "0.9s" }}>
               <a
                 href="#media"
                 className="px-8 py-3 bg-primary text-primary-foreground font-heading text-sm font-bold tracking-wider uppercase rounded neon-border hover:scale-105 transition-transform duration-300"
@@ -63,10 +68,10 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Character Art */}
-          <div className="relative flex justify-center lg:justify-end">
-            <div className="relative">
-              <div className="absolute -inset-4 rounded-full bg-gradient-to-tr from-rgb-red/20 via-rgb-green/20 to-rgb-blue/20 blur-3xl opacity-60" />
+          {/* Character Art — float + fade */}
+          <div className="relative flex justify-center lg:justify-end animate-hero-fade-in opacity-0" style={{ animationDelay: "0.5s" }}>
+            <div className="relative animate-hero-float">
+              <div className="absolute -inset-4 rounded-full bg-gradient-to-tr from-rgb-red/20 via-rgb-green/20 to-rgb-blue/20 blur-3xl opacity-60 animate-rgb-pulse" />
               <img
                 src={characterArt}
                 alt="Rainbow Robin character"
