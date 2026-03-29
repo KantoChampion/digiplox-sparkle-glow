@@ -88,7 +88,7 @@ const HeroSection = () => {
                   loop
                   muted
                   playsInline
-                  className="absolute inset-0 w-full h-full object-contain drop-shadow-[0_0_40px_hsl(120_100%_45%_/_0.3)]"
+                  className="absolute inset-0 w-full h-full object-contain drop-shadow-[0_0_40px_hsl(120_100%_45%_/_0.3)] mix-blend-screen"
                 />
               </div>
             </div>
