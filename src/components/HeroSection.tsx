@@ -12,25 +12,30 @@ const characterImages = [characterArt, robinJump, robinJumpShade, robinSplitGun,
 const HeroSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [nextIndex, setNextIndex] = useState<number | null>(null);
-  const [transitioning, setTransitioning] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
+      setNextIndex((current) => {
+        if (current !== null) return current; // transition in progress, skip
+        return null; // trigger via activeIndex
+      });
+      // Use a functional approach to read latest activeIndex
       setActiveIndex((prev) => {
-        const next = (prev + 1) % characterImages.length;
-        setNextIndex(next);
-        setTransitioning(true);
-        return prev; // don't change activeIndex yet
+        // We use this only to compute nextIndex; don't mutate activeIndex
+        setNextIndex((current) => {
+          if (current !== null) return current;
+          return (prev + 1) % characterImages.length;
+        });
+        return prev;
       });
     }, 3500);
     return () => clearInterval(interval);
-  }, []); // no deps — stable interval
+  }, []);
 
   const handleTransitionEnd = () => {
-    if (transitioning && nextIndex !== null) {
+    if (nextIndex !== null) {
       setActiveIndex(nextIndex);
       setNextIndex(null);
-      setTransitioning(false);
     }
   };
 
