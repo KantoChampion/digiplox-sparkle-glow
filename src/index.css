@@ -6,48 +6,49 @@
 
 @layer base {
   :root {
-    --background: 220 20% 6%;
-    --foreground: 200 20% 90%;
+    --background: 240 15% 5%;
+    --foreground: 210 20% 92%;
 
-    --card: 220 18% 10%;
-    --card-foreground: 200 20% 90%;
+    --card: 240 12% 9%;
+    --card-foreground: 210 20% 92%;
 
-    --popover: 220 18% 10%;
-    --popover-foreground: 200 20% 90%;
+    --popover: 240 12% 9%;
+    --popover-foreground: 210 20% 92%;
 
-    --primary: 180 100% 50%;
-    --primary-foreground: 220 20% 6%;
+    --primary: 120 100% 45%;
+    --primary-foreground: 240 15% 5%;
 
-    --secondary: 320 100% 60%;
+    --secondary: 0 100% 55%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 220 15% 15%;
-    --muted-foreground: 215 15% 55%;
+    --muted: 240 10% 14%;
+    --muted-foreground: 230 12% 50%;
 
-    --accent: 320 100% 60%;
+    --accent: 220 100% 55%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 15% 18%;
-    --input: 220 15% 18%;
-    --ring: 180 100% 50%;
+    --border: 240 10% 16%;
+    --input: 240 10% 16%;
+    --ring: 120 100% 45%;
 
     --radius: 0.5rem;
 
-    --neon-glow: 180 100% 50%;
-    --neon-pink: 320 100% 60%;
-    --surface-elevated: 220 18% 12%;
+    --rgb-red: 0 100% 55%;
+    --rgb-green: 120 100% 45%;
+    --rgb-blue: 220 100% 55%;
+    --surface-elevated: 240 12% 11%;
 
-    --sidebar-background: 220 18% 8%;
-    --sidebar-foreground: 200 20% 90%;
-    --sidebar-primary: 180 100% 50%;
-    --sidebar-primary-foreground: 220 20% 6%;
-    --sidebar-accent: 220 15% 15%;
-    --sidebar-accent-foreground: 200 20% 90%;
-    --sidebar-border: 220 15% 18%;
-    --sidebar-ring: 180 100% 50%;
+    --sidebar-background: 240 12% 7%;
+    --sidebar-foreground: 210 20% 92%;
+    --sidebar-primary: 120 100% 45%;
+    --sidebar-primary-foreground: 240 15% 5%;
+    --sidebar-accent: 240 10% 14%;
+    --sidebar-accent-foreground: 210 20% 92%;
+    --sidebar-border: 240 10% 16%;
+    --sidebar-ring: 120 100% 45%;
   }
 }
 
@@ -66,16 +67,28 @@
 }
 
 @layer utilities {
-  .neon-text {
-    text-shadow: 0 0 10px hsl(var(--primary) / 0.6),
-                 0 0 40px hsl(var(--primary) / 0.3),
-                 0 0 80px hsl(var(--primary) / 0.1);
+  .neon-text-green {
+    text-shadow: 0 0 10px hsl(var(--rgb-green) / 0.7),
+                 0 0 40px hsl(var(--rgb-green) / 0.3),
+                 0 0 80px hsl(var(--rgb-green) / 0.15);
   }
 
-  .neon-text-pink {
-    text-shadow: 0 0 10px hsl(var(--neon-pink) / 0.6),
-                 0 0 40px hsl(var(--neon-pink) / 0.3),
-                 0 0 80px hsl(var(--neon-pink) / 0.1);
+  .neon-text-red {
+    text-shadow: 0 0 10px hsl(var(--rgb-red) / 0.7),
+                 0 0 40px hsl(var(--rgb-red) / 0.3),
+                 0 0 80px hsl(var(--rgb-red) / 0.15);
+  }
+
+  .neon-text-blue {
+    text-shadow: 0 0 10px hsl(var(--rgb-blue) / 0.7),
+                 0 0 40px hsl(var(--rgb-blue) / 0.3),
+                 0 0 80px hsl(var(--rgb-blue) / 0.15);
+  }
+
+  .neon-text-rainbow {
+    text-shadow: 0 0 10px hsl(var(--rgb-red) / 0.5),
+                 0 0 30px hsl(var(--rgb-green) / 0.3),
+                 0 0 60px hsl(var(--rgb-blue) / 0.2);
   }
 
   .neon-border {
@@ -84,12 +97,32 @@
                 inset 0 0 5px hsl(var(--primary) / 0.05);
   }
 
-  .neon-border-pink {
-    box-shadow: 0 0 5px hsl(var(--neon-pink) / 0.4),
-                0 0 20px hsl(var(--neon-pink) / 0.1);
+  .neon-border-red {
+    box-shadow: 0 0 5px hsl(var(--rgb-red) / 0.4),
+                0 0 20px hsl(var(--rgb-red) / 0.1);
+  }
+
+  .neon-border-blue {
+    box-shadow: 0 0 5px hsl(var(--rgb-blue) / 0.4),
+                0 0 20px hsl(var(--rgb-blue) / 0.1);
   }
 
   .gradient-radial {
-    background: radial-gradient(ellipse at center, hsl(var(--primary) / 0.15) 0%, transparent 70%);
+    background: radial-gradient(ellipse at center, hsl(var(--primary) / 0.12) 0%, transparent 70%);
+  }
+
+  .gradient-rgb {
+    background: linear-gradient(135deg, hsl(var(--rgb-red) / 0.15), hsl(var(--rgb-green) / 0.15), hsl(var(--rgb-blue) / 0.15));
+  }
+
+  .text-gradient-rgb {
+    background: linear-gradient(90deg, hsl(var(--rgb-red)), hsl(var(--rgb-green)), hsl(var(--rgb-blue)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .border-gradient-rgb {
+    border-image: linear-gradient(90deg, hsl(var(--rgb-red)), hsl(var(--rgb-green)), hsl(var(--rgb-blue))) 1;
   }
 }

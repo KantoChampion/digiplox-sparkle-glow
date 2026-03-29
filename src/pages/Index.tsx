@@ -1,8 +1,10 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import FeaturesStrip from "@/components/FeaturesStrip";
-import GameShowcase from "@/components/GameShowcase";
-import AboutSection from "@/components/AboutSection";
+import StorySection from "@/components/StorySection";
+import StagesSection from "@/components/StagesSection";
+import CharactersSection from "@/components/CharactersSection";
+import MediaSection from "@/components/MediaSection";
 import FooterSection from "@/components/FooterSection";
 
 const Index = () => {
@@ -11,8 +13,10 @@ const Index = () => {
       <Navbar />
       <HeroSection />
       <FeaturesStrip />
-      <GameShowcase />
-      <AboutSection />
+      <StorySection />
+      <StagesSection />
+      <CharactersSection />
+      <MediaSection />
       <FooterSection />
     </div>
   );

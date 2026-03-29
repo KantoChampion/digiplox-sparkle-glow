@@ -1,55 +1,86 @@
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/rainbow-robin-hero-bg.jpg";
+import characterArt from "@/assets/robin-character.png";
 
 const HeroSection = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background image */}
+      {/* Background */}
       <div className="absolute inset-0">
         <img
           src={heroBg}
-          alt="Cyberpunk cityscape"
+          alt="RGB Cyber Realm"
           className="w-full h-full object-cover"
           width={1920}
           height={1080}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/40 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/30 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/50 via-transparent to-background/50" />
       </div>
 
+      {/* Scanline overlay */}
+      <div className="absolute inset-0 pointer-events-none opacity-[0.03]"
+        style={{ backgroundImage: "repeating-linear-gradient(0deg, transparent, transparent 2px, hsl(120 100% 45% / 0.1) 2px, hsl(120 100% 45% / 0.1) 4px)" }}
+      />
+
       {/* Content */}
-      <div className="relative z-10 container text-center px-4">
-        <p className="text-sm md:text-base tracking-[0.3em] uppercase text-primary animate-pulse-neon mb-4 font-medium">
-          Indie Game Studio
-        </p>
-        <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-black leading-tight neon-text text-primary mb-6">
-          DIGIPLOX
-          <span className="block text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground mt-2">
-            STUDIOS
-          </span>
-        </h1>
-        <p className="max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed">
-          Revitalizing the action platformer for next generation gaming.
-          Powered by Unreal Engine.
-        </p>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a
-            href="https://store.steampowered.com/app/740200/Android_Hunter_A/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-8 py-3 bg-primary text-primary-foreground font-heading text-sm font-bold tracking-wider uppercase rounded neon-border hover:scale-105 transition-transform duration-300"
-          >
-            Play on Steam
-          </a>
-          <a
-            href="#games"
-            className="px-8 py-3 border border-primary/40 text-primary font-heading text-sm font-bold tracking-wider uppercase rounded hover:bg-primary/10 transition-colors duration-300"
-          >
-            Learn More
-          </a>
+      <div className="relative z-10 container px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          {/* Text */}
+          <div className="text-center lg:text-left">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 mb-6">
+              <span className="w-2 h-2 rounded-full bg-primary animate-pulse-neon" />
+              <span className="text-xs tracking-[0.2em] uppercase text-primary font-medium">Work In Progress · Unreal Engine 5</span>
+            </div>
+
+            <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-black leading-none mb-4">
+              <span className="text-gradient-rgb neon-text-rainbow">RAINBOW</span>
+              <br />
+              <span className="text-foreground">ROBIN</span>
+            </h1>
+
+            <p className="text-lg md:text-xl text-muted-foreground mb-4 leading-relaxed max-w-lg mx-auto lg:mx-0">
+              Escape from the Cyber Realm
+            </p>
+
+            <p className="text-base text-muted-foreground/80 mb-8 leading-relaxed max-w-md mx-auto lg:mx-0">
+              A next-gen sidescroller shooter blending fast-paced action, RGB color-switching mechanics, 
+              and daring adult themes — inspired by Megaman &amp; Metroid.
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-center lg:items-start gap-4">
+              <a
+                href="#media"
+                className="px-8 py-3 bg-primary text-primary-foreground font-heading text-sm font-bold tracking-wider uppercase rounded neon-border hover:scale-105 transition-transform duration-300"
+              >
+                Watch Gameplay
+              </a>
+              <a
+                href="#story"
+                className="px-8 py-3 border border-secondary/40 text-secondary font-heading text-sm font-bold tracking-wider uppercase rounded hover:bg-secondary/10 transition-colors duration-300"
+              >
+                The Story
+              </a>
+            </div>
+          </div>
+
+          {/* Character Art */}
+          <div className="relative flex justify-center lg:justify-end">
+            <div className="relative">
+              <div className="absolute -inset-4 rounded-full bg-gradient-to-tr from-rgb-red/20 via-rgb-green/20 to-rgb-blue/20 blur-3xl opacity-60" />
+              <img
+                src={characterArt}
+                alt="Rainbow Robin character"
+                className="relative w-[300px] md:w-[420px] lg:w-[480px] drop-shadow-[0_0_40px_hsl(120_100%_45%_/_0.3)]"
+                width={1024}
+                height={1024}
+              />
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Bottom fade line */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
+      {/* Bottom RGB line */}
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-rgb-red via-rgb-green to-rgb-blue opacity-60" />
     </section>
   );
 };
