@@ -74,7 +74,7 @@ const HeroSection = () => {
             </div>
 
             <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-black leading-none mb-4 animate-hero-fade-in opacity-0 electric-sparks" style={{ animationDelay: "0.4s" }}>
-              <span className="text-gradient-rgb neon-text-rainbow animate-glitch-flicker inline-block">RAINBOW</span>
+              <span className="text-gradient-rgb neon-text-rainbow animate-glitch-flicker inline-block chromatic-glitch" data-text="RAINBOW">RAINBOW</span>
               <br />
               <span className="text-foreground animate-neon-breathe inline-block" style={{ color: "hsl(var(--primary))" }}>ROBIN</span>
               {/* Spark particles */}
