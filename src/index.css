@@ -81,32 +81,32 @@
 
   .electric-sparks::before {
     top: 10%;
-    right: -8px;
-    width: 3px;
-    height: 18px;
+    right: -10px;
+    width: 4px;
+    height: 24px;
     background: hsl(var(--primary));
-    box-shadow: 0 0 8px hsl(var(--primary)), 0 0 20px hsl(var(--primary) / 0.6);
-    animation: spark-1 1.8s ease-in-out infinite;
+    box-shadow: 0 0 12px hsl(var(--primary)), 0 0 30px hsl(var(--primary) / 0.8), 0 0 50px hsl(var(--primary) / 0.4);
+    animation: spark-1 1.2s ease-in-out infinite;
   }
 
   .electric-sparks::after {
     bottom: 15%;
-    left: -6px;
-    width: 2px;
-    height: 14px;
+    left: -8px;
+    width: 3px;
+    height: 20px;
     background: hsl(var(--primary));
-    box-shadow: 0 0 6px hsl(var(--primary)), 0 0 16px hsl(var(--primary) / 0.5);
-    animation: spark-2 2.2s ease-in-out infinite 0.6s;
+    box-shadow: 0 0 10px hsl(var(--primary)), 0 0 25px hsl(var(--primary) / 0.7), 0 0 45px hsl(var(--primary) / 0.3);
+    animation: spark-2 1.4s ease-in-out infinite 0.3s;
   }
 
   .spark-particle {
     position: absolute;
-    width: 4px;
-    height: 4px;
+    width: 6px;
+    height: 6px;
     border-radius: 50%;
     background: hsl(var(--primary));
-    box-shadow: 0 0 6px hsl(var(--primary)), 0 0 12px hsl(var(--primary) / 0.5);
-    animation: spark-float 1.5s ease-out infinite;
+    box-shadow: 0 0 10px hsl(var(--primary)), 0 0 20px hsl(var(--primary) / 0.7), 0 0 40px hsl(var(--primary) / 0.4);
+    animation: spark-float 1s ease-out infinite;
     pointer-events: none;
   }
 
@@ -192,8 +192,9 @@
 
 @keyframes spark-float {
   0% { opacity: 0; transform: translate(0, 0) scale(0); }
-  10% { opacity: 1; transform: translate(-2px, -4px) scale(1); }
-  30% { opacity: 0.6; transform: translate(3px, -8px) scale(0.7); }
-  50% { opacity: 0; transform: translate(-1px, -14px) scale(0); }
-  100% { opacity: 0; transform: translate(0, -14px) scale(0); }
+  8% { opacity: 1; transform: translate(-3px, -6px) scale(1.2); }
+  25% { opacity: 0.8; transform: translate(5px, -12px) scale(1); }
+  45% { opacity: 0.4; transform: translate(-2px, -20px) scale(0.6); }
+  60% { opacity: 0; transform: translate(1px, -28px) scale(0); }
+  100% { opacity: 0; transform: translate(0, -28px) scale(0); }
 }
