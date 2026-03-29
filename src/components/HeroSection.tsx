@@ -73,10 +73,15 @@ const HeroSection = () => {
               <span className="text-xs tracking-[0.2em] uppercase text-primary font-medium">Work In Progress · Unreal Engine 5</span>
             </div>
 
-            <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-black leading-none mb-4 animate-hero-fade-in opacity-0" style={{ animationDelay: "0.4s" }}>
+            <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-black leading-none mb-4 animate-hero-fade-in opacity-0 electric-sparks" style={{ animationDelay: "0.4s" }}>
               <span className="text-gradient-rgb neon-text-rainbow animate-glitch-flicker inline-block">RAINBOW</span>
               <br />
               <span className="text-foreground animate-neon-breathe inline-block" style={{ color: "hsl(var(--primary))" }}>ROBIN</span>
+              {/* Spark particles */}
+              <span className="spark-particle" style={{ top: "20%", right: "5%", animationDelay: "0s" }} />
+              <span className="spark-particle" style={{ top: "60%", left: "2%", animationDelay: "0.7s" }} />
+              <span className="spark-particle" style={{ bottom: "10%", right: "15%", animationDelay: "1.2s" }} />
+              <span className="spark-particle" style={{ top: "5%", left: "30%", animationDelay: "0.4s" }} />
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground mb-4 leading-relaxed max-w-lg mx-auto lg:mx-0 animate-hero-fade-in opacity-0" style={{ animationDelay: "0.6s" }}>
