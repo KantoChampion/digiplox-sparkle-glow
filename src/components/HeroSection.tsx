@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import heroBg from "@/assets/rainbow-robin-hero-bg.jpg";
 import characterArt from "@/assets/robin-character.png";
 import robinJump from "@/assets/robin-jump.png";
@@ -12,27 +12,31 @@ const characterImages = [characterArt, robinJump, robinJumpShade, robinSplitGun,
 const HeroSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [nextIndex, setNextIndex] = useState<number | null>(null);
-  const [transitioning, setTransitioning] = useState(false);
+  const [showNext, setShowNext] = useState(false);
+  const indexRef = useRef(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setNextIndex((prev) => {
-        const next = ((prev ?? activeIndex) + 1) % characterImages.length;
-        return next;
+      const next = (indexRef.current + 1) % characterImages.length;
+      setNextIndex(next);
+      // Force a frame delay so the element mounts at opacity-0 first
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          setShowNext(true);
+        });
       });
-      setTransitioning(true);
     }, 3500);
     return () => clearInterval(interval);
-  }, [activeIndex]);
+  }, []);
 
-  // When fade-in of next image completes, swap it to active
-  const handleTransitionEnd = () => {
-    if (transitioning && nextIndex !== null) {
+  const handleTransitionEnd = useCallback(() => {
+    if (nextIndex !== null) {
+      indexRef.current = nextIndex;
       setActiveIndex(nextIndex);
       setNextIndex(null);
-      setTransitioning(false);
+      setShowNext(false);
     }
-  };
+  }, [nextIndex]);
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -114,7 +118,7 @@ const HeroSection = () => {
                   <img
                     src={characterImages[nextIndex]}
                     alt="Rainbow Robin character"
-                    className={`absolute inset-0 w-full h-full object-contain drop-shadow-[0_0_40px_hsl(120_100%_45%_/_0.3)] transition-opacity duration-700 ease-in-out ${transitioning ? "opacity-100" : "opacity-0"}`}
+                    className={`absolute inset-0 w-full h-full object-contain drop-shadow-[0_0_40px_hsl(120_100%_45%_/_0.3)] transition-opacity duration-700 ease-in-out ${showNext ? "opacity-100" : "opacity-0"}`}
                     onTransitionEnd={handleTransitionEnd}
                   />
                 )}
