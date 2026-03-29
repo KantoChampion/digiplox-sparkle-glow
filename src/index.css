@@ -66,6 +66,7 @@
   }
 }
 
+@layer utilities {
   .electric-sparks {
     position: relative;
   }
@@ -98,34 +99,6 @@
     animation: spark-2 2.2s ease-in-out infinite 0.6s;
   }
 
-  @keyframes spark-1 {
-    0%, 100% { opacity: 0; transform: scaleY(0) rotate(15deg); }
-    8% { opacity: 1; transform: scaleY(1) rotate(15deg); }
-    12% { opacity: 1; transform: scaleY(1.2) rotate(20deg); }
-    16% { opacity: 0; transform: scaleY(0) rotate(25deg); }
-    40% { opacity: 0; transform: scaleY(0) rotate(-10deg); }
-    44% { opacity: 0.8; transform: scaleY(0.8) rotate(-10deg); }
-    48% { opacity: 0; transform: scaleY(0) rotate(-10deg); }
-  }
-
-  @keyframes spark-2 {
-    0%, 100% { opacity: 0; transform: scaleY(0) rotate(-20deg); }
-    10% { opacity: 0; transform: scaleY(0) rotate(-20deg); }
-    14% { opacity: 1; transform: scaleY(1) rotate(-20deg); }
-    18% { opacity: 0; transform: scaleY(0) rotate(-15deg); }
-    55% { opacity: 0; transform: scaleY(0) rotate(12deg); }
-    58% { opacity: 0.9; transform: scaleY(1.1) rotate(12deg); }
-    62% { opacity: 0; transform: scaleY(0) rotate(12deg); }
-  }
-
-  @keyframes spark-float {
-    0% { opacity: 0; transform: translate(0, 0) scale(0); }
-    10% { opacity: 1; transform: translate(-2px, -4px) scale(1); }
-    30% { opacity: 0.6; transform: translate(3px, -8px) scale(0.7); }
-    50% { opacity: 0; transform: translate(-1px, -14px) scale(0); }
-    100% { opacity: 0; transform: translate(0, -14px) scale(0); }
-  }
-
   .spark-particle {
     position: absolute;
     width: 4px;
@@ -136,7 +109,6 @@
     animation: spark-float 1.5s ease-out infinite;
     pointer-events: none;
   }
-
 
   .neon-text-green {
     text-shadow: 0 0 10px hsl(var(--rgb-green) / 0.7),
@@ -196,4 +168,32 @@
   .border-gradient-rgb {
     border-image: linear-gradient(90deg, hsl(var(--rgb-red)), hsl(var(--rgb-green)), hsl(var(--rgb-blue))) 1;
   }
+}
+
+@keyframes spark-1 {
+  0%, 100% { opacity: 0; transform: scaleY(0) rotate(15deg); }
+  8% { opacity: 1; transform: scaleY(1) rotate(15deg); }
+  12% { opacity: 1; transform: scaleY(1.2) rotate(20deg); }
+  16% { opacity: 0; transform: scaleY(0) rotate(25deg); }
+  40% { opacity: 0; transform: scaleY(0) rotate(-10deg); }
+  44% { opacity: 0.8; transform: scaleY(0.8) rotate(-10deg); }
+  48% { opacity: 0; transform: scaleY(0) rotate(-10deg); }
+}
+
+@keyframes spark-2 {
+  0%, 100% { opacity: 0; transform: scaleY(0) rotate(-20deg); }
+  10% { opacity: 0; transform: scaleY(0) rotate(-20deg); }
+  14% { opacity: 1; transform: scaleY(1) rotate(-20deg); }
+  18% { opacity: 0; transform: scaleY(0) rotate(-15deg); }
+  55% { opacity: 0; transform: scaleY(0) rotate(12deg); }
+  58% { opacity: 0.9; transform: scaleY(1.1) rotate(12deg); }
+  62% { opacity: 0; transform: scaleY(0) rotate(12deg); }
+}
+
+@keyframes spark-float {
+  0% { opacity: 0; transform: translate(0, 0) scale(0); }
+  10% { opacity: 1; transform: translate(-2px, -4px) scale(1); }
+  30% { opacity: 0.6; transform: translate(3px, -8px) scale(0.7); }
+  50% { opacity: 0; transform: translate(-1px, -14px) scale(0); }
+  100% { opacity: 0; transform: translate(0, -14px) scale(0); }
 }
