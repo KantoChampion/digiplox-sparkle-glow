@@ -1,7 +1,29 @@
+import { useState, useEffect } from "react";
 import heroBg from "@/assets/rainbow-robin-hero-bg.jpg";
 import characterArt from "@/assets/robin-character.png";
+import robinJump from "@/assets/robin-jump.png";
+import robinJumpShade from "@/assets/robin-jump-shade.png";
+import robinSplitGun from "@/assets/robin-split-gun.png";
+import robinHurt from "@/assets/robin-hurt.png";
+import robinCaptured from "@/assets/robin-captured.png";
+
+const characterImages = [characterArt, robinJump, robinJumpShade, robinSplitGun, robinHurt, robinCaptured];
 
 const HeroSection = () => {
+  const [currentImage, setCurrentImage] = useState(0);
+  const [fading, setFading] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFading(true);
+      setTimeout(() => {
+        setCurrentImage((prev) => (prev + 1) % characterImages.length);
+        setFading(false);
+      }, 400);
+    }, 3500);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated Background */}
@@ -73,9 +95,9 @@ const HeroSection = () => {
             <div className="relative animate-hero-float">
               <div className="absolute -inset-4 rounded-full bg-gradient-to-tr from-rgb-red/20 via-rgb-green/20 to-rgb-blue/20 blur-3xl opacity-60 animate-rgb-pulse" />
               <img
-                src={characterArt}
+                src={characterImages[currentImage]}
                 alt="Rainbow Robin character"
-                className="relative w-[300px] md:w-[420px] lg:w-[480px] drop-shadow-[0_0_40px_hsl(120_100%_45%_/_0.3)]"
+                className={`relative w-[300px] md:w-[420px] lg:w-[480px] drop-shadow-[0_0_40px_hsl(120_100%_45%_/_0.3)] transition-opacity duration-400 ${fading ? "opacity-0" : "opacity-100"}`}
                 width={1024}
                 height={1024}
               />
