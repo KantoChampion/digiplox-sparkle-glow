@@ -6,49 +6,49 @@
 
 @layer base {
   :root {
-    --background: 240 15% 5%;
-    --foreground: 210 20% 92%;
+    --background: 220 25% 4%;
+    --foreground: 195 30% 90%;
 
-    --card: 240 12% 9%;
-    --card-foreground: 210 20% 92%;
+    --card: 220 20% 7%;
+    --card-foreground: 195 30% 90%;
 
-    --popover: 240 12% 9%;
-    --popover-foreground: 210 20% 92%;
+    --popover: 220 20% 7%;
+    --popover-foreground: 195 30% 90%;
 
-    --primary: 120 100% 45%;
-    --primary-foreground: 240 15% 5%;
+    --primary: 190 100% 50%;
+    --primary-foreground: 220 25% 4%;
 
-    --secondary: 0 100% 55%;
+    --secondary: 25 100% 55%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 240 10% 14%;
-    --muted-foreground: 230 12% 50%;
+    --muted: 220 15% 12%;
+    --muted-foreground: 210 15% 45%;
 
-    --accent: 220 100% 55%;
+    --accent: 190 80% 40%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 240 10% 16%;
-    --input: 240 10% 16%;
-    --ring: 120 100% 45%;
+    --border: 200 20% 14%;
+    --input: 200 20% 14%;
+    --ring: 190 100% 50%;
 
     --radius: 0.5rem;
 
-    --rgb-red: 0 100% 55%;
-    --rgb-green: 120 100% 45%;
-    --rgb-blue: 220 100% 55%;
-    --surface-elevated: 240 12% 11%;
+    --rgb-red: 25 100% 55%;
+    --rgb-green: 190 100% 50%;
+    --rgb-blue: 220 80% 55%;
+    --surface-elevated: 220 18% 9%;
 
-    --sidebar-background: 240 12% 7%;
-    --sidebar-foreground: 210 20% 92%;
-    --sidebar-primary: 120 100% 45%;
-    --sidebar-primary-foreground: 240 15% 5%;
-    --sidebar-accent: 240 10% 14%;
-    --sidebar-accent-foreground: 210 20% 92%;
-    --sidebar-border: 240 10% 16%;
-    --sidebar-ring: 120 100% 45%;
+    --sidebar-background: 220 22% 5%;
+    --sidebar-foreground: 195 30% 90%;
+    --sidebar-primary: 190 100% 50%;
+    --sidebar-primary-foreground: 220 25% 4%;
+    --sidebar-accent: 220 15% 12%;
+    --sidebar-accent-foreground: 195 30% 90%;
+    --sidebar-border: 200 20% 14%;
+    --sidebar-ring: 190 100% 50%;
   }
 }
 
