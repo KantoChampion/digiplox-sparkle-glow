@@ -82,19 +82,14 @@ const HeroSection = () => {
             <div className="relative animate-hero-float">
               <div className="absolute -inset-4 rounded-full bg-gradient-to-tr from-rgb-red/20 via-rgb-green/20 to-rgb-blue/20 blur-3xl opacity-60 animate-rgb-pulse" />
               <div className="relative w-[300px] md:w-[420px] lg:w-[480px]" style={{ aspectRatio: "1" }}>
-                <img
-                  src={characterImages[activeIndex]}
-                  alt="Rainbow Robin character"
-                  className="absolute inset-0 w-full h-full object-contain drop-shadow-[0_0_40px_hsl(120_100%_45%_/_0.3)] transition-opacity duration-700 ease-in-out opacity-100"
+                <video
+                  src="/videos/hero-character.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="absolute inset-0 w-full h-full object-contain drop-shadow-[0_0_40px_hsl(120_100%_45%_/_0.3)]"
                 />
-                {nextIndex !== null && (
-                  <img
-                    src={characterImages[nextIndex]}
-                    alt="Rainbow Robin character"
-                    className={`absolute inset-0 w-full h-full object-contain drop-shadow-[0_0_40px_hsl(120_100%_45%_/_0.3)] transition-opacity duration-700 ease-in-out ${showNext ? "opacity-100" : "opacity-0"}`}
-                    onTransitionEnd={handleTransitionEnd}
-                  />
-                )}
               </div>
             </div>
           </div>
