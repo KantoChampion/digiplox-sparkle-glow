@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import heroBg from "@/assets/rainbow-robin-hero-bg.jpg";
 import characterArt from "@/assets/robin-character.png";
 import robinJump from "@/assets/robin-jump.png";
@@ -12,32 +12,31 @@ const characterImages = [characterArt, robinJump, robinJumpShade, robinSplitGun,
 const HeroSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [nextIndex, setNextIndex] = useState<number | null>(null);
+  const [showNext, setShowNext] = useState(false);
+  const indexRef = useRef(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setNextIndex((current) => {
-        if (current !== null) return current; // transition in progress, skip
-        return null; // trigger via activeIndex
-      });
-      // Use a functional approach to read latest activeIndex
-      setActiveIndex((prev) => {
-        // We use this only to compute nextIndex; don't mutate activeIndex
-        setNextIndex((current) => {
-          if (current !== null) return current;
-          return (prev + 1) % characterImages.length;
+      const next = (indexRef.current + 1) % characterImages.length;
+      setNextIndex(next);
+      // Force a frame delay so the element mounts at opacity-0 first
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          setShowNext(true);
         });
-        return prev;
       });
     }, 3500);
     return () => clearInterval(interval);
   }, []);
 
-  const handleTransitionEnd = () => {
+  const handleTransitionEnd = useCallback(() => {
     if (nextIndex !== null) {
+      indexRef.current = nextIndex;
       setActiveIndex(nextIndex);
       setNextIndex(null);
+      setShowNext(false);
     }
-  };
+  }, [nextIndex]);
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
