@@ -1,7 +1,29 @@
+import { useState, useEffect } from "react";
 import heroBg from "@/assets/rainbow-robin-hero-bg.jpg";
 import characterArt from "@/assets/robin-character.png";
+import robinJump from "@/assets/robin-jump.png";
+import robinJumpShade from "@/assets/robin-jump-shade.png";
+import robinSplitGun from "@/assets/robin-split-gun.png";
+import robinHurt from "@/assets/robin-hurt.png";
+import robinCaptured from "@/assets/robin-captured.png";
+
+const characterImages = [characterArt, robinJump, robinJumpShade, robinSplitGun, robinHurt, robinCaptured];
 
 const HeroSection = () => {
+  const [currentImage, setCurrentImage] = useState(0);
+  const [fading, setFading] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFading(true);
+      setTimeout(() => {
+        setCurrentImage((prev) => (prev + 1) % characterImages.length);
+        setFading(false);
+      }, 400);
+    }, 3500);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated Background */}
