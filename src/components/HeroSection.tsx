@@ -10,19 +10,29 @@ import robinCaptured from "@/assets/robin-captured.png";
 const characterImages = [characterArt, robinJump, robinJumpShade, robinSplitGun, robinHurt, robinCaptured];
 
 const HeroSection = () => {
-  const [currentImage, setCurrentImage] = useState(0);
-  const [fading, setFading] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [nextIndex, setNextIndex] = useState<number | null>(null);
+  const [transitioning, setTransitioning] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setFading(true);
-      setTimeout(() => {
-        setCurrentImage((prev) => (prev + 1) % characterImages.length);
-        setFading(false);
-      }, 400);
+      setNextIndex((prev) => {
+        const next = ((prev ?? activeIndex) + 1) % characterImages.length;
+        return next;
+      });
+      setTransitioning(true);
     }, 3500);
     return () => clearInterval(interval);
-  }, []);
+  }, [activeIndex]);
+
+  // When fade-in of next image completes, swap it to active
+  const handleTransitionEnd = () => {
+    if (transitioning && nextIndex !== null) {
+      setActiveIndex(nextIndex);
+      setNextIndex(null);
+      setTransitioning(false);
+    }
+  };
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
