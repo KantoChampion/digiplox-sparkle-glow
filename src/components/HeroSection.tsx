@@ -79,9 +79,13 @@ const HeroSection = () => {
               <span className="text-foreground animate-neon-breathe inline-block" style={{ color: "hsl(var(--primary))" }}>ROBIN</span>
               {/* Spark particles */}
               <span className="spark-particle" style={{ top: "20%", right: "5%", animationDelay: "0s" }} />
-              <span className="spark-particle" style={{ top: "60%", left: "2%", animationDelay: "0.7s" }} />
-              <span className="spark-particle" style={{ bottom: "10%", right: "15%", animationDelay: "1.2s" }} />
-              <span className="spark-particle" style={{ top: "5%", left: "30%", animationDelay: "0.4s" }} />
+              <span className="spark-particle" style={{ top: "60%", left: "2%", animationDelay: "0.5s" }} />
+              <span className="spark-particle" style={{ bottom: "10%", right: "15%", animationDelay: "0.9s" }} />
+              <span className="spark-particle" style={{ top: "5%", left: "30%", animationDelay: "0.3s" }} />
+              <span className="spark-particle" style={{ top: "40%", right: "20%", animationDelay: "0.15s" }} />
+              <span className="spark-particle" style={{ bottom: "25%", left: "15%", animationDelay: "0.65s" }} />
+              <span className="spark-particle" style={{ top: "10%", right: "35%", animationDelay: "1.1s" }} />
+              <span className="spark-particle" style={{ bottom: "5%", left: "40%", animationDelay: "0.8s" }} />
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground mb-4 leading-relaxed max-w-lg mx-auto lg:mx-0 animate-hero-fade-in opacity-0" style={{ animationDelay: "0.6s" }}>
