@@ -16,16 +16,16 @@ const HeroSection = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setNextIndex((prev) => {
-        const next = ((prev ?? activeIndex) + 1) % characterImages.length;
-        return next;
+      setActiveIndex((prev) => {
+        const next = (prev + 1) % characterImages.length;
+        setNextIndex(next);
+        setTransitioning(true);
+        return prev; // don't change activeIndex yet
       });
-      setTransitioning(true);
     }, 3500);
     return () => clearInterval(interval);
-  }, [activeIndex]);
+  }, []); // no deps — stable interval
 
-  // When fade-in of next image completes, swap it to active
   const handleTransitionEnd = () => {
     if (transitioning && nextIndex !== null) {
       setActiveIndex(nextIndex);
