@@ -6,12 +6,13 @@ const HeroSection = () => {
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
-        <img
-          src={heroBg}
-          alt="RGB Cyber Realm"
-          className="w-full h-full object-cover animate-hero-drift scale-110"
-          width={1920}
-          height={1080}
+        <video
+          src="/videos/hero-bg.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover scale-110"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/30 to-background" />
         <div className="absolute inset-0 bg-gradient-to-r from-background/50 via-transparent to-background/50" />
