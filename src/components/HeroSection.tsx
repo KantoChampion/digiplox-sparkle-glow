@@ -1,4 +1,5 @@
 import heroBg from "@/assets/rainbow-robin-hero-bg.jpg";
+import heroCharacter from "@/assets/hero-character.gif";
 
 const HeroSection = () => {
 
@@ -82,16 +83,9 @@ const HeroSection = () => {
             <div className="relative animate-hero-float">
               <div className="absolute -inset-4 rounded-full bg-gradient-to-tr from-rgb-red/20 via-rgb-green/20 to-rgb-blue/20 blur-3xl opacity-60 animate-rgb-pulse" />
               <div className="relative w-[300px] md:w-[420px] lg:w-[480px]" style={{ aspectRatio: "1" }}>
-                <video
-                  src="/videos/hero-character.mp4?v=3"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  preload="auto"
-                  onLoadedMetadata={(e) => {
-                    void e.currentTarget.play().catch(() => undefined);
-                  }}
+                <img
+                  src={heroCharacter}
+                  alt="Rainbow Robin character"
                   className="absolute inset-0 w-full h-full object-contain"
                 />
               </div>
