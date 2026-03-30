@@ -1,4 +1,3 @@
-import heroBg from "@/assets/rainbow-robin-hero-bg.jpg";
 import heroCharacter from "@/assets/hero-character.gif";
 
 const HeroSection = () => {
