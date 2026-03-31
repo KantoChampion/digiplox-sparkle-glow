@@ -1,4 +1,4 @@
-import heroCharacter from "@/assets/hero-character.gif";
+import heroCharacter from "@/assets/hero-character.png";
 
 const HeroSection = () => {
 
