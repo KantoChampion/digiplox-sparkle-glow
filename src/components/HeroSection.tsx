@@ -1,6 +1,14 @@
+import { useEffect, useState } from "react";
 import heroCharacter from "@/assets/hero-character.png";
 
 const HeroSection = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -79,7 +87,7 @@ const HeroSection = () => {
           </div>
 
           {/* Character Art — float + fade */}
-          <div className="relative flex justify-center lg:justify-end animate-hero-fade-in opacity-0 lg:absolute lg:right-[-5%] lg:bottom-[-10%]" style={{ animationDelay: "0.5s" }}>
+          <div className="relative flex justify-center lg:justify-end animate-hero-fade-in opacity-0 lg:absolute lg:right-[-5%] lg:bottom-[-10%]" style={{ animationDelay: "0.5s", transform: `translateY(${scrollY * -0.15}px)` }}>
             <div className="relative animate-hero-float">
               <div className="absolute -inset-4 rounded-full bg-gradient-to-tr from-rgb-red/20 via-rgb-green/20 to-rgb-blue/20 blur-3xl opacity-60 animate-rgb-pulse" />
               <div className="relative w-[420px] md:w-[600px] lg:w-[800px] xl:w-[900px]" style={{ aspectRatio: "1" }}>
