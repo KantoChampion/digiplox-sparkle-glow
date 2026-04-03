@@ -1,6 +1,14 @@
+import { useEffect, useState } from "react";
 import heroCharacter from "@/assets/hero-character.png";
 
 const HeroSection = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
