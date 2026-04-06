@@ -21,7 +21,7 @@ const FooterSection = () => {
 
         <div className="mt-10 pt-6 border-t border-border text-center">
           <p className="text-xs text-muted-foreground tracking-wider">
-            © {new Date().getFullYear()} DigiPlox Studios. All rights reserved.
+            © {new Date().getFullYear()} ChaiPixel. All rights reserved.
           </p>
         </div>
       </div>

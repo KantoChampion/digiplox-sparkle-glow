@@ -43,9 +43,9 @@ const CharactersSection = () => {
             </div>
             <p className="text-xs tracking-wider uppercase text-secondary mb-4">Robin's Girlfriend</p>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-              Slim, tech-savvy with short pink hair. Alex tricked Robin into playing the arcade machine 
-              and now appears as glitchy holograms — providing tips, backstory, and emotional support 
-              while confessing her prank gone wrong.
+              Robin's girlfriend who dared her to beat the high score on the old arcade machine. Now appears 
+              as glitchy holograms — providing tips, backstory, and emotional support as Robin fights to 
+              reunite with the girl she loves.
             </p>
             <div className="flex gap-2">
               <span className="px-3 py-1 rounded-full text-xs font-semibold bg-secondary/10 text-secondary border border-secondary/20">Support</span>

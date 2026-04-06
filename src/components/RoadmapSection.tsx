@@ -23,7 +23,7 @@ const milestones = [
     title: "Characters & Story",
     status: "upcoming" as const,
     progress: 15,
-    items: ["Cutscene system & dialogue", "Character animations & expressions", "Adult content scenes integration"],
+    items: ["Cutscene system & dialogue", "Character animations & expressions", "Rescue side quests & story moments"],
     color: "rgb-blue",
   },
   {

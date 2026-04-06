@@ -35,7 +35,7 @@ const StorySection = () => {
             },
             {
               title: "The RGB Portal",
-              description: "To escape, Robin must charge the RGB Portal by traversing increasingly hazardous cyber zones. Each stage represents a deeper layer of the digital prison, building toward a climactic showdown with the Collective's avatar.",
+              description: "To escape, Robin must navigate five hand-crafted stages and reach the RGB Portal. Along the way, discover other trapped souls — choose to rescue them for powerful buffs and emotional story moments, or push forward to return to the real world.",
               color: "rgb-blue",
               borderClass: "neon-border-blue",
             },
