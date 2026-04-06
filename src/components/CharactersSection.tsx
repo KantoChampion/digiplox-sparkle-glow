@@ -22,14 +22,14 @@ const CharactersSection = () => {
             </div>
             <p className="text-xs tracking-wider uppercase text-primary mb-4">Protagonist</p>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-              A vibrant 20-year-old college student with flowing green hair. Trapped in the Cyber Realm, she transforms 
-              into Rainbow Robin — armed with an RGB-shifting suit that lets her smash barriers, dodge lasers, and 
-              fight back against the Chroma Collective.
+              A vibrant college student pulled into a neon cyber prison. Transformed into Rainbow Robin, she gains 
+              the power to switch between three combat modes to battle robotic harvesters, rescue trapped souls, 
+              and fight her way back to the real world.
             </p>
             <div className="flex gap-2">
-              <span className="px-3 py-1 rounded-full text-xs font-semibold bg-rgb-red/10 text-rgb-red border border-rgb-red/20">Red Mode</span>
-              <span className="px-3 py-1 rounded-full text-xs font-semibold bg-rgb-green/10 text-rgb-green border border-rgb-green/20">Green Mode</span>
-              <span className="px-3 py-1 rounded-full text-xs font-semibold bg-rgb-blue/10 text-rgb-blue border border-rgb-blue/20">Blue Mode</span>
+              <span className="px-3 py-1 rounded-full text-xs font-semibold bg-rgb-red/10 text-rgb-red border border-rgb-red/20">Red Melee</span>
+              <span className="px-3 py-1 rounded-full text-xs font-semibold bg-rgb-blue/10 text-rgb-blue border border-rgb-blue/20">Blue Ranged</span>
+              <span className="px-3 py-1 rounded-full text-xs font-semibold bg-rgb-green/10 text-rgb-green border border-rgb-green/20">Green Evasion</span>
             </div>
           </div>
 
