@@ -12,10 +12,10 @@ const StorySection = () => {
             Escape from the <span className="text-gradient-rgb">Cyber Realm</span>
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            Robin, a vibrant college student, is tricked by her mischievous girlfriend Alex into playing 
-            an old arcade machine titled <em className="text-foreground">RGB Realm Runner</em>. Starting 
-            the game activates a hidden portal, sucking her consciousness into a vast cyber realm — a glitchy, 
-            neon-lit digital world ruled by sentient AI overlords known as the Chroma Collective.
+            While hanging out with her girlfriend Alex, college student Robin is dared to beat the high score 
+            on an old arcade machine. One wrong button press later, she's ripped into a glitchy digital prison 
+            ruled by the mysterious <em className="text-foreground">Chroma Collective</em> — an AI that sees 
+            organic life as fuel.
           </p>
         </div>
 
