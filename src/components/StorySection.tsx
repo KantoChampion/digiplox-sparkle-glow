@@ -23,7 +23,7 @@ const StorySection = () => {
           {[
             {
               title: "Digital Transformation",
-              description: "Transformed into Rainbow Robin, her body is enhanced with a sci-fi suit that pulses with RGB energy — allowing her to shift colors to overcome obstacles, but making her a target for the realm's cyber robots.",
+              description: "Transformed into Rainbow Robin, she gains the power to switch between three vibrant modes: Red for powerful melee attacks, Blue for precise ranged combat, and Green for lightning-fast evasion and agile platforming.",
               color: "rgb-green",
               borderClass: "neon-border",
             },
