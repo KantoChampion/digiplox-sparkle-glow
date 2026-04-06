@@ -67,7 +67,7 @@ const HeroSection = () => {
             </p>
 
             <p className="text-base text-muted-foreground/80 mb-8 leading-relaxed max-w-md mx-auto lg:mx-0 animate-hero-fade-in opacity-0" style={{ animationDelay: "0.7s" }}>
-              A vibrant 2D action platformer blending fast-paced combat, RGB color-switching mechanics,
+              A vibrant 2.5D action platformer blending fast-paced combat, RGB color-switching mechanics,
               and a heartfelt story of courage and love.
             </p>
 
