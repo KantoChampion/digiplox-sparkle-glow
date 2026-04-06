@@ -12,10 +12,10 @@ const StorySection = () => {
             Escape from the <span className="text-gradient-rgb">Cyber Realm</span>
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            Robin, a vibrant college student, is tricked by her mischievous girlfriend Alex into playing 
-            an old arcade machine titled <em className="text-foreground">RGB Realm Runner</em>. Starting 
-            the game activates a hidden portal, sucking her consciousness into a vast cyber realm — a glitchy, 
-            neon-lit digital world ruled by sentient AI overlords known as the Chroma Collective.
+            While hanging out with her girlfriend Alex, college student Robin is dared to beat the high score 
+            on an old arcade machine. One wrong button press later, she's ripped into a glitchy digital prison 
+            ruled by the mysterious <em className="text-foreground">Chroma Collective</em> — an AI that sees 
+            organic life as fuel.
           </p>
         </div>
 
@@ -23,7 +23,7 @@ const StorySection = () => {
           {[
             {
               title: "Digital Transformation",
-              description: "Transformed into Rainbow Robin, her body is enhanced with a sci-fi suit that pulses with RGB energy — allowing her to shift colors to overcome obstacles, but making her a target for the realm's cyber robots.",
+              description: "Transformed into Rainbow Robin, she gains the power to switch between three vibrant modes: Red for powerful melee attacks, Blue for precise ranged combat, and Green for lightning-fast evasion and agile platforming.",
               color: "rgb-green",
               borderClass: "neon-border",
             },
@@ -35,7 +35,7 @@ const StorySection = () => {
             },
             {
               title: "The RGB Portal",
-              description: "To escape, Robin must charge the RGB Portal by traversing increasingly hazardous cyber zones. Each stage represents a deeper layer of the digital prison, building toward a climactic showdown with the Collective's avatar.",
+              description: "To escape, Robin must navigate five hand-crafted stages and reach the RGB Portal. Along the way, discover other trapped souls — choose to rescue them for powerful buffs and emotional story moments, or push forward to return to the real world.",
               color: "rgb-blue",
               borderClass: "neon-border-blue",
             },

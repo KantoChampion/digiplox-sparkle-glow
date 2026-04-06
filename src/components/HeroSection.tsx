@@ -44,7 +44,7 @@ const HeroSection = () => {
           <div className="text-center lg:text-left">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 mb-6 animate-hero-fade-in opacity-0" style={{ animationDelay: "0.2s" }}>
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse-neon" />
-              <span className="text-xs tracking-[0.2em] uppercase text-primary font-medium">Work In Progress · Unreal Engine 5</span>
+              <span className="text-xs tracking-[0.2em] uppercase text-primary font-medium">Work In Progress · 2D Action Platformer</span>
             </div>
 
             <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-black leading-none mb-4 animate-hero-fade-in opacity-0 electric-sparks" style={{ animationDelay: "0.4s" }}>
@@ -67,8 +67,8 @@ const HeroSection = () => {
             </p>
 
             <p className="text-base text-muted-foreground/80 mb-8 leading-relaxed max-w-md mx-auto lg:mx-0 animate-hero-fade-in opacity-0" style={{ animationDelay: "0.7s" }}>
-              A next-gen sidescroller shooter blending fast-paced action, RGB color-switching mechanics, 
-              and daring adult themes — inspired by Megaman &amp; Metroid.
+              A vibrant 2D action platformer blending fast-paced combat, RGB color-switching mechanics,
+              and a heartfelt story of courage and love.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center lg:items-start gap-4 animate-hero-fade-in opacity-0" style={{ animationDelay: "0.9s" }}>

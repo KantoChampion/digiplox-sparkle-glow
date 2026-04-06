@@ -22,14 +22,14 @@ const CharactersSection = () => {
             </div>
             <p className="text-xs tracking-wider uppercase text-primary mb-4">Protagonist</p>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-              A vibrant 20-year-old college student with flowing green hair. Trapped in the Cyber Realm, she transforms 
-              into Rainbow Robin — armed with an RGB-shifting suit that lets her smash barriers, dodge lasers, and 
-              fight back against the Chroma Collective.
+              A vibrant college student pulled into a neon cyber prison. Transformed into Rainbow Robin, she gains 
+              the power to switch between three combat modes to battle robotic harvesters, rescue trapped souls, 
+              and fight her way back to the real world.
             </p>
             <div className="flex gap-2">
-              <span className="px-3 py-1 rounded-full text-xs font-semibold bg-rgb-red/10 text-rgb-red border border-rgb-red/20">Red Mode</span>
-              <span className="px-3 py-1 rounded-full text-xs font-semibold bg-rgb-green/10 text-rgb-green border border-rgb-green/20">Green Mode</span>
-              <span className="px-3 py-1 rounded-full text-xs font-semibold bg-rgb-blue/10 text-rgb-blue border border-rgb-blue/20">Blue Mode</span>
+              <span className="px-3 py-1 rounded-full text-xs font-semibold bg-rgb-red/10 text-rgb-red border border-rgb-red/20">Red Melee</span>
+              <span className="px-3 py-1 rounded-full text-xs font-semibold bg-rgb-blue/10 text-rgb-blue border border-rgb-blue/20">Blue Ranged</span>
+              <span className="px-3 py-1 rounded-full text-xs font-semibold bg-rgb-green/10 text-rgb-green border border-rgb-green/20">Green Evasion</span>
             </div>
           </div>
 
@@ -43,9 +43,9 @@ const CharactersSection = () => {
             </div>
             <p className="text-xs tracking-wider uppercase text-secondary mb-4">Robin's Girlfriend</p>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-              Slim, tech-savvy with short pink hair. Alex tricked Robin into playing the arcade machine 
-              and now appears as glitchy holograms — providing tips, backstory, and emotional support 
-              while confessing her prank gone wrong.
+              Robin's girlfriend who dared her to beat the high score on the old arcade machine. Now appears 
+              as glitchy holograms — providing tips, backstory, and emotional support as Robin fights to 
+              reunite with the girl she loves.
             </p>
             <div className="flex gap-2">
               <span className="px-3 py-1 rounded-full text-xs font-semibold bg-secondary/10 text-secondary border border-secondary/20">Support</span>

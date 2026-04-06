@@ -9,19 +9,19 @@ const FooterSection = () => {
               <span className="text-foreground ml-1">ROBIN</span>
             </h3>
             <p className="text-sm text-muted-foreground">
-              A DigiPlox Studios Production · Powered by Unreal Engine 5
+              A ChaiPixel Production
             </p>
           </div>
           
           <div className="text-sm text-muted-foreground text-center md:text-right">
             <p>Work in Progress</p>
-            <p className="mt-1">For mature audiences (18+)</p>
+            <p className="mt-1">Wishlist on Steam</p>
           </div>
         </div>
 
         <div className="mt-10 pt-6 border-t border-border text-center">
           <p className="text-xs text-muted-foreground tracking-wider">
-            © {new Date().getFullYear()} DigiPlox Studios. All rights reserved.
+            © {new Date().getFullYear()} ChaiPixel. All rights reserved.
           </p>
         </div>
       </div>

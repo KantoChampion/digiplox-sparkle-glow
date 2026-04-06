@@ -1,34 +1,34 @@
-import { Zap, Palette, Swords, Flame, Heart } from "lucide-react";
+import { Zap, Palette, Swords, Heart, Sparkles } from "lucide-react";
 
 const features = [
   {
     icon: Palette,
-    title: "RGB Color-Switching",
-    description: "Shift between Red, Green, and Blue modes to smash barriers, dodge lasers, and swing through obstacles.",
+    title: "Color-Switching Combat",
+    description: "Switch between Red melee, Blue ranged gun, and Green evasion to overcome enemies and solve puzzles.",
     color: "text-rgb-green",
   },
   {
     icon: Swords,
-    title: "Hardcore Action",
-    description: "Fast-paced sidescroller shooter inspired by classics like Megaman and Metroid with modern flair.",
+    title: "Fluid 2D Action",
+    description: "Tight platforming and satisfying combat inspired by classics like Megaman and Metroid.",
     color: "text-rgb-red",
   },
   {
     icon: Zap,
-    title: "Unreal Engine 5",
-    description: "Built on UE5 for stunning visuals, fluid animations, and next-gen graphical fidelity.",
+    title: "5 Stunning Stages",
+    description: "From glowing retro arcades and data streams to circuit jungles, firewall fortresses, and the Core Nexus.",
     color: "text-rgb-blue",
   },
   {
-    icon: Flame,
-    title: "5 Cyber Biomes",
-    description: "Traverse Neon Arcades, Data Rapids, Circuit Jungles, Firewall Fortresses, and the Core Nexus.",
+    icon: Sparkles,
+    title: "Neon Cyberpunk Art",
+    description: "Beautiful neon aesthetic with parallax backgrounds, dynamic lighting, and hand-crafted visuals.",
     color: "text-rgb-red",
   },
   {
     icon: Heart,
-    title: "Adult Themes",
-    description: "Mature narrative featuring sensual peril, empowerment, and a daring love story in a digital world.",
+    title: "Heartfelt Story",
+    description: "A touching narrative about courage, growing stronger through adversity, and the bond between Robin and Alex.",
     color: "text-secondary",
   },
 ];
