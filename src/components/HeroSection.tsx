@@ -91,7 +91,7 @@ const HeroSection = () => {
           <div className="relative flex justify-center lg:justify-end animate-hero-fade-in opacity-0 lg:absolute lg:right-[-5%] lg:bottom-[-10%]" style={{ animationDelay: "0.5s", transform: `translateY(${scrollY * -0.15}px)` }}>
             <div className="relative animate-hero-float">
               <div className="absolute -inset-4 rounded-full bg-gradient-to-tr from-rgb-red/20 via-rgb-green/20 to-rgb-blue/20 blur-3xl opacity-60 animate-rgb-pulse" />
-              <div className="relative w-[280px] md:w-[380px] lg:w-[500px] xl:w-[580px]" style={{ aspectRatio: "1" }}>
+              <div className="relative w-[340px] md:w-[450px] lg:w-[580px] xl:w-[680px]" style={{ aspectRatio: "1" }}>
                 <img
                   src={heroCharacter}
                   alt="Rainbow Robin character"
